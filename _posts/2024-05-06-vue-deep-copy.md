@@ -104,7 +104,7 @@ const onUpdateData = (idx: number, value) => {
 
 `toRaw` 메서드를 활용하여 Proxy Object를 원시값으로 변경한다면 `structuredClone` 메서드를 문제없이 사용할 수 있다 ^\_\_^
 
-### 레퍼런스
+## 레퍼런스
 
 - [MDN - Spred_syntax](https://developer.mozilla.org/ko/docs/Web/JavaScript/Reference/Operators/Spread_syntax)
 - [MDN - structuredClone](https://developer.mozilla.org/en-US/docs/Web/API/structuredClone)
