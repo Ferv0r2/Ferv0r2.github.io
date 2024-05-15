@@ -2,8 +2,8 @@
 title: Atomic Design과 Component naming
 author: Ferv0r2
 date: 2024-05-15 22:57:00 +0900
-categories: [design system, rule]
-tags: [storybook, atomic design, naming rule]
+categories: [design system]
+tags: [storybook, atomic design, naming rule, component]
 render_with_liquid: false
 ---
 
