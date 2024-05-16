@@ -1,10 +1,12 @@
 ---
 title: Atomic Design과 Component naming
+description: Atomic Design의 구성과 Component naming의 특성 그리고 각각 애매한 부분을 살펴보자.
 author: Ferv0r2
 date: 2024-05-15 22:57:00 +0900
 categories: [design system]
 tags: [storybook, atomic design, naming rule, component]
 render_with_liquid: false
+social_preview_image: "/assets/img/post/20240515/banner.png"
 ---
 
 ## Atomic Design
