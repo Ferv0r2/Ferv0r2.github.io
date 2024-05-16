@@ -5,6 +5,7 @@ date: 2024-05-06 22:25:00 +0900
 categories: [vue]
 tags: [proxy, spreadOperator, deepCopy, structuredClone]
 render_with_liquid: false
+image: /assets/img/post/20240506/banner.png
 ---
 
 ## 발단
