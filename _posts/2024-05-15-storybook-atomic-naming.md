@@ -6,12 +6,10 @@ date: 2024-05-15 22:57:00 +0900
 categories: [design system]
 tags: [storybook, atomic design, naming rule, component]
 render_with_liquid: false
-social_preview_image: "/assets/img/post/20240515/banner.png"
+image: /assets/img/post/20240515/banner.png
 ---
 
 ## Atomic Design
-
-![Desktop View](/assets/img/post/20240515/banner.png)
 
 Atomic Design은 인터페이스를 작은, 재사용 가능한 구성 요소로 나누고 이를 조합하여 복잡한 디자인을 만드는 방법론이다.
 

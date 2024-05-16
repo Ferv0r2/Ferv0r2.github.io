@@ -5,6 +5,7 @@ date: 2024-05-05 14:08:00 +0900
 categories: [talk]
 tags: [etc]
 render_with_liquid: false
+image: /assets/img/post/20240505/banner.png
 ---
 
 ## 플랫폼 이주
