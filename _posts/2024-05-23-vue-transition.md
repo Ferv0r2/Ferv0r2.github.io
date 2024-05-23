@@ -357,7 +357,7 @@ main {
 
 ![Desktop View](/assets/img/post/20240523/typing.gif){: .normal}
 
-첫 번쨰 `MessageBox`의 `complete` 이벤트를 통해 `flag`를 변경하면서 두 번째 메세지가 순차적으로 표시되도록 하였다.
+첫 번째 `MessageBox`의 `complete` 이벤트를 통해 `flag`를 변경하면서 두 번째 메세지가 순차적으로 표시되도록 하였다.
 
 여러 라이브러리도 많지만 `Transition`만으로도 충분히 가능하다는 것을 확인하는 시간이었다. ^\_\_^
 
