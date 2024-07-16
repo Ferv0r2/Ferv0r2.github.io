@@ -1,6 +1,6 @@
 ---
 title: 우리 팀의 ESLint v9 마이그레이션 적용기 (feat. Vue)
-description:
+description: ESLint와 코딩 컨벤션의 연결 고리와 효율성에 관하여
 author: Ferv0r2
 date: 2024-07-16 01:02:00 +0900
 categories: [convention, eslint, vue]
