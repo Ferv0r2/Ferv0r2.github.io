@@ -1,5 +1,5 @@
 ---
-title: 우리 팀의 ESLint v9 마이그레이션 적용기
+title: 우리 팀의 ESLint v9 마이그레이션 적용기 (feat. Vue)
 description:
 author: Ferv0r2
 date: 2024-07-16 01:02:00 +0900
@@ -249,15 +249,31 @@ export default [
 
 - [Github: vuejs - eslint-plugin-vue](https://github.com/vuejs/eslint-plugin-vue/pull/2407)
 
-## 최신화를 진행하며
+## 심연에 손을 뻗다
 
 이번 업데이트 적용을 위해 많은 라이브러리의 버전을 최신화하고 새로 추가하였습니다.
+
+이와 함께 새로운 플러그인을 도입하면서 추가된 규칙이 생기면서 검토하는 시간을 가졌습니다.
+
+> 코딩 컨벤션을 문서화 뿐만 아니라 eslint에 적용하면 코드 품질을 보다 훌륭하게 유지보수할 수 있지 않을까?
+
+> 비활성화한 규칙은 꼭 필요에 의한 것일까?
+
+> 지금 우리 `lint`는 `legacy`하지 않을까?
+
+사실 이미 깔끔하게 설정되어 있는 저장소의 eslint 설정에 대한 의문을 갖지 않았을 뿐더러
+
+그것이 적합한 규칙으로 설정되었다는 믿음(?)이 있던 것 같습니다.
+
+하지만 지금 최신화와 함께 새로 발생한 lint 이슈를 수정하면서 적절한 시기라 판단하였고 묻어 놓았던 **비활성화 규칙**을 하나씩 걷어내어 보기 시작했습니다.
 
 ![Desktop View](/assets/img/post/20240716/package.png){: width="540" .normal}
 
 > 잔뜩 갈무리한 라이브러리
 
-이러한 과정과 동시에 우리 팀이 `off`한 옵션과 그 이유를 파헤치고 싶어졌습니다.
+### 비활성화 규칙
+
+우리 팀에서 비활성화한 규칙은 무엇이고, 왜 비활성화 했을까요?
 
 그 중에서 먼저 눈에 띈 규칙은 `no-undef` 규칙이었습니다.
 
@@ -274,24 +290,6 @@ _"사용하지 않는 규칙은 당연히 표시되어야 하지 않나?"_ 싶�
 
 또한, [typescript-eslint](https://typescript-eslint.io/troubleshooting/faqs/general/#how-do-i-turn-on-a-typescript-eslint-rule)에서도 권장하는 방식임을 확인하였습니다.
 
-이렇게 리서치를 하다 보니 다른 비활성화된 규칙의 이유가 궁금해졌습니다.
-
-## 심연에 손을 뻗다
-
-기존 ESLint를 수정하고 규칙을 리서치하면서 문득 이러한 생각이 들었습니다.
-
-> 코딩 컨벤션을 문서화 뿐만 아니라 eslint에 적용하면 코드 품질을 보다 훌륭하게 유지보수할 수 있지 않을까?
-
-> `off`한 `rule`은 꼭 필요했을까?
-
-> 지금 우리 `lint`는 `legacy`하지 않을까?
-
-사실 이미 깔끔하게 설정되어 있는 저장소의 eslint 설정에 대한 의문을 갖지 않았을 뿐더러
-
-그것이 적합한 규칙으로 설정되었다는 믿음(?)이 있던 것 같습니다.
-
-하지만 지금 최신화와 함께 새로 발생한 lint 이슈를 수정하면서 적절한 시기라 판단하였고 묻어 놓았던 **비활성화 규칙**을 하나씩 걷어내어 보기 시작했습니다.
-
 몇 가지 규칙은 활성화해도 에러 없이 정상 작동하였으나 **덩치가 큰 규칙**도 있었습니다.
 
 예를 들어 아래 이미지의 규칙입니다.
@@ -304,9 +302,77 @@ _"사용하지 않는 규칙은 당연히 표시되어야 하지 않나?"_ 싶�
 
 이러한 문제를 판도라의 상자처럼 열지 않고 덮어놓을 수도 있겠지만, 코드가 더 많아지기 전에 풀어야할 숙제이기에 회의 중 **이슈로 제안**하였습니다.
 
-마침내 eslint 개선 및 코딩 컨벤션 고도화는 개인의 의견이 아닌 팀의 논의 사항으로 확장되어 **Bottom-Top** 형태가 만들어지는 좋은 경험이었습니다.
+### Vue를 활용하는 규칙
 
-**어떤 방식으로 진행하는 것이 가장 효과적일지** 논의하고 이를 해결하는 과정에서 더 좋은 절충안을 만들어낼 것이라 기대합니다.
+기본적으로 우리 팀은 [Vue - Style Guide](https://vuejs.org/style-guide/)를 따르고 있으며, 그에 맞는 **eslint-plugin-vue**를 적용하고 있습니다.
+
+Style Guide를 보면 완전한 하나의 선택을 강요하지 않다 보니 eslint 역시 이를 강제하지 않는 부분이 있습니다.
+
+- **Vue2**에서 **Vue3**로 업데이트
+- **Composition API**의 등장
+- `script setup` 문법의 등장
+
+이러한 사항이 겹치다 보니 **kebab-case**와 **PascalCase** 등 Casing이 혼용되는 부분이 많았고, 가장 효율적인 방법을 적용하기로 하였습니다.
+
+![Desktop View](/assets/img/post/20240716/casing.png){: .normal}
+
+우리 팀은 두 가지 케이스를 모두 사용해본 결과, 첫 번째 코드 블럭인 **PascalCase**로 결정하였습니다.
+
+리팩토링과 컴포넌트 삭제 시 검색을 **두 번씩 반복하지 않기 위해서**입니다.
+
+예를 들어 `InputBox` 파일의 컴포넌트를 `input-box`와 같이 사용한다면, `InputBox`와 `input-box` 두 가지를 검색해서 수정해야 하는 불편함이 있습니다.
+
+![Desktop View](/assets/img/post/20240716/casing2.png){: .normal}
+
+기존에 우리 팀은 컴포넌트와 파일명은 **PascalCase**로, `props` 선언은 **camelCase**로, `props` 바인딩은 **kebab-case**로 사용해 왔습니다.
+
+즉, `<WelcomeMessage greeting-text="hi"/>`와 같이 사용했습니다.
+
+하지만 위 이미지처럼 `Good`이지만, 다른 Casing을 혼용하는 것은 권장하지 않는다는 내용이 있습니다.
+
+> you can use either convention but we don't recommend mixing two different casing styles
+
+또한, 권장 내용 뿐만 아니라 효율성과 연결된 이유도 있습니다.
+
+**Vue v3.4**에서 `props`에 변수 바인딩 축약 기능이 업데이트 되었습니다.
+
+- **Before**
+
+```vue
+<template>
+  <TextBox :width="width" :height="height" :error="error" />
+</template>
+```
+
+- **After**
+
+```vue
+<template>
+  <TextBox :width :height :error />
+</template>
+```
+
+하지만 `props`가 합성어인 경우 **kebab-case**로 진행 시 축약이 불가합니다.
+
+- **kebab-case**
+
+```vue
+<template>
+  <TextBox :width :height :error :element-icon="elementIcon" />
+</template>
+```
+
+- **PascalCase**
+
+```vue
+<template>
+  <TextBox :width :height :error :elementIcon />
+</template>
+```
+
+따라서 `<WelcomeMessage greetingText="hi"/>`와 같이 **PascalCase**와 **camelCase**로 코드를 관리하는 것에 대한 의견을 주고 받는 계기가 되었습니다.
+
+사실 이것이 받아들여 지는 경우에 합성어 `props`를 가진 모든 컴포넌트의 수정이 필요하고, 사이드 이펙트를 초래할까 걱정이 되지만 언제까지 `rule`을 `off`하고 덮어 놓을 수는 없습니다.
 
 ## 마치며
 
@@ -334,5 +400,9 @@ ESLint v9로의 마이그레이션 과정은 단순한 기술적 업데이트를
 - 변수와 함수명은 `camelCase` 사용
 
 이 모든 것이 ESLint를 통해 자동으로 관리될 수 있도록 만들고 **더 높은 코드 품질**을 유지하고 싶습니다.
+
+이번 내용을 통해 eslint 개선 및 코딩 컨벤션 고도화는 개인의 의견이 아닌 팀의 논의 사항으로 확장되어 **Bottom-Top** 형태가 만들어지는 좋은 경험이었습니다. ~~(이를 해결하는 과정을 쉽지 않겠지만)~~
+
+**어떤 방식으로 진행하는 것이 가장 효과적일지** 논의하고 이를 해결하는 과정에서 더 좋은 절충안을 만들어낼 것이라 기대합니다.
 
 팀 단위의 이슈로 수면 위에 오른 만큼, 저 역시 책임감을 갖고 개선에 힘쓰면 좋을 것 같습니다 :)
