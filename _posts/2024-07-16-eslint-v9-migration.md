@@ -328,7 +328,7 @@ Style Guide를 보면 완전한 하나의 선택을 강요하지 않다 보니 e
 
 즉, `<WelcomeMessage greeting-text="hi"/>`와 같이 사용했습니다.
 
-하지만 위 이미지처럼 `Good`이지만, 다른 Casing을 혼용하는 것은 권장하지 않는다는 내용이 있습니다.
+하지만 위 이미지처럼 `Good`일지라도 다른 Casing을 혼용하는 것은 권장하지 않는다는 내용이 있습니다.
 
 > you can use either convention but we don't recommend mixing two different casing styles
 
