@@ -39,11 +39,9 @@ image: /assets/img/post/20240716/banner.png
 
 ## ESLint 마이그레이션
 
-ESLint의 업데이트로 인해 설정 파일이 **flat config** 형태로 변경되었습니다.
+ESLint의 업데이트로 인해 설정 파일이 **Flat Config**만 지원하는 형태로 변경되었습니다.
 
-기존 CommonJS 형식은 **지원되지 않는 Legacy 버전**이 되어 버렸습니다.
-
-아예 동작하지 않도록 설정되었어요...
+기존 CommonJS 형식은 **지원되지 않는 Legacy 버전**이 되어 아예 동작하지 않도록 설정되었어요...
 
 이는 기능 개발 중, **일정 관리의 걸림돌**이 되었습니다.
 
@@ -245,7 +243,7 @@ export default [
 
 또한, **규칙 설정을 여러 객체로 분리**함으로써 프로젝트의 다양한 요구사항에 따라 규칙을 더 세밀하게 조정할 수 있게 되었습니다.
 
-가장 걱정이었던 부분은 현재 사용 중인 `eslint-plugin-vue` 플러그인이 **flat config**를 지원하지 않을 수 있는 부분에 염려하였는데, 다행히도 **올해 3월**에 늦지 않게 업데이트 해주었습니다
+가장 걱정이었던 부분은 현재 사용 중인 `eslint-plugin-vue` 플러그인이 **Flat Config**를 지원하지 않을 수 있는 부분에 염려하였는데, 다행히도 **올해 3월**에 늦지 않게 업데이트 해주었습니다
 
 - [Github: vuejs - eslint-plugin-vue](https://github.com/vuejs/eslint-plugin-vue/pull/2407)
 
@@ -288,7 +286,9 @@ export default [
 
 _"사용하지 않는 규칙은 당연히 표시되어야 하지 않나?"_ 싶었는데 이는 **JavaScript에서 필요한 규칙**으로, **TypeScript**는 `type-check`가 이를 대체하여 `build` 시에 잡아낼 수 있는 에러라고 합니다.
 
-또한, [typescript-eslint](https://typescript-eslint.io/troubleshooting/faqs/general/#how-do-i-turn-on-a-typescript-eslint-rule)에서도 권장하는 방식임을 확인하였습니다.
+또한, [typescript-eslint](https://typescript-eslint.io/troubleshooting/faqs/general/#how-do-i-turn-on-a-typescript-eslint-rule)에서도 **TypeScript**는 `no-undef` 규칙 비활성화를 권장하는 방식임을 확인하였습니다.
+
+이러한 사례가 있다는 것을 접하며 규칙을 하나하나 활성화하기 시작했습니다.
 
 몇 가지 규칙은 활성화해도 에러 없이 정상 작동하였으나 **덩치가 큰 규칙**도 있었습니다.
 
