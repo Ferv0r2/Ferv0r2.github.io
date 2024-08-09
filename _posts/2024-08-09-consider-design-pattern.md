@@ -3,8 +3,8 @@ title: 웹과 앱에 다른 디자인 패턴을 적용하게 된 계기
 description: 디자인 패턴에 대응하는 건에 대하여
 author: Ferv0r2
 date: 2024-08-09 23:32:00 +0900
-categories: [design pattern, main]
-tags: [presentational, container]
+categories: [design pattern, architecture]
+tags: [presentational, container, compound]
 render_with_liquid: false
 image: /assets/img/post/20240809/banner.png
 ---
