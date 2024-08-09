@@ -4,7 +4,7 @@ description: 디자인 시스템과 UI 라이브러리가 어우러질 때 장�
 author: Ferv0r2
 date: 2024-07-29 23:02:00 +0900
 categories: [ui, chakra ui, design system]
-tags: [react, react]
+tags: [react]
 render_with_liquid: false
 image: /assets/img/post/20240729/banner.png
 ---
