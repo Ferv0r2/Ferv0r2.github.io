@@ -120,8 +120,8 @@ const ButtonContainer = () => {
 ![Desktop View](/assets/img/post/20240809/compound-pattern.jpg){: .normal}
 
 > [출처 - Patterns](https://patterns-dev-kr.github.io/)
->
-> **Compound Component** 패턴은 UI와 비즈니스 로직을 모두 포함하는 컴포넌트를 사용하여, 개발 속도를 높이고 관리 복잡성을 줄이는 패턴입니다.
+
+**Compound Component** 패턴은 UI와 비즈니스 로직을 모두 포함하는 컴포넌트를 사용하여, 개발 속도를 높이고 관리 복잡성을 줄이는 패턴입니다.
 
 - 역할:
 
