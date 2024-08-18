@@ -9,8 +9,6 @@ render_with_liquid: false
 image: /assets/img/post/20240818/banner.png
 ---
 
-> [배너 이미지 출처 - Freepik](https://kr.freepik.com/free-vector/hand-drawn-business-planning-illustrated_20124605.htm#fromView=search&page=1&position=0&uuid=2d755937-8e77-46da-9354-025daa202a2d)
-
 ## 들어가며
 
 개발자로서 일하면서, 저는 스스로 주니어 개발자가 아니라는 인식을 가지려고 노력합니다.
@@ -146,3 +144,7 @@ image: /assets/img/post/20240818/banner.png
 "뛰는 것이 두려워하여 평생 걷는 사람"에게 기회는 찾아오지 않습니다.
 
 일정 관리 능력을 통해 시니어 개발자로 성장할 수 있는 발판을 마련하게 될 것입니다.
+
+## 레퍼런스
+
+- [배너 이미지 - Freepik](https://kr.freepik.com/free-vector/hand-drawn-business-planning-illustrated_20124605.htm#fromView=search&page=1&position=0&uuid=2d755937-8e77-46da-9354-025daa202a2d)
