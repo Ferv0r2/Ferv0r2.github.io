@@ -1,8 +1,8 @@
 ---
-title: 프론트엔드와 백엔드, 더 효율적으로 협업하는 법
+title: 프론트엔드와 백엔드, 더 야무지게 협업하는 법
 description: 프론트엔드 개발자가 백엔드 개발자와 협업할 때 효율적인 방법과 경험을 공유합니다.
 author: Ferv0r2
-date: 2024-09-19 00:00:00 +0900
+date: 2024-09-19 00:01:00 +0900
 categories: [frontend, backend, collaboration]
 tags: [frontend, backend, API, web development, CORS, database]
 render_with_liquid: false
