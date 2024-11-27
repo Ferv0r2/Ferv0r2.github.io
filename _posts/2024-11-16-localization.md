@@ -9,8 +9,6 @@ render_with_liquid: false
 image: /assets/img/post/20241116/banner.jpg
 ---
 
-# **다국어 지원과 사용자 경험의 중요성**
-
 ## **들어가며**
 
 프론트엔드 개발자라면 언젠가 다국어 지원(i18n)을 구현해야 하는 상황을 맞이하게 됩니다.
