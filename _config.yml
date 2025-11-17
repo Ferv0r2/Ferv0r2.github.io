@@ -190,6 +190,7 @@ exclude:
   - docs
   - tools
   - README.md
+  - linkedin-post.md
   - LICENSE
   - rollup.config.js
   - package*.json
