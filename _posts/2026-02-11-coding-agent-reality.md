@@ -6,7 +6,7 @@ date: 2026-02-11 20:50:00 +0900
 categories: [growth, reflection]
 tags: [ai, coding-agent, productivity, developer, claude, technical-debt]
 render_with_liquid: false
-image:
+image: /assets/img/post/20260211/banner.png
 ---
 
 ## 1시간이면 게임이 나온다고요?
