@@ -6,6 +6,8 @@ date: 2026-03-07 12:30:00 +0900
 categories: [growth, reflection]
 tags: [ai, problem-solving, developer, productivity, product, architecture]
 render_with_liquid: false
+image:
+  path: /assets/img/post/20260307-mixboard.jpeg
 ---
 
 ## 들어가며
