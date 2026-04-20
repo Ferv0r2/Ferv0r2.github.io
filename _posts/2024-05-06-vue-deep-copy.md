@@ -6,6 +6,7 @@ categories: [vue]
 tags: [proxy, spreadOperator, deepCopy, structuredClone]
 render_with_liquid: false
 image: /assets/img/post/20240506/banner.png
+description: Vue의 Proxy Object를 깊은 복사할 때 스프레드 연산자의 한계와 structuredClone + toRaw를 활용한 해결법을 소개합니다.
 ---
 
 ## 발단

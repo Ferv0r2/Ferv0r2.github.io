@@ -1,0 +1,32 @@
+---
+layout: null
+permalink: /llms.txt
+---
+# {{ site.title }}
+
+> {{ site.social.name }}의 기술 블로그 (Frontend Engineer)
+> 주제: AI 에이전트 활용, 프론트엔드 개발, 생산성, 1인 게임 개발, 성장 회고
+> Topics: AI agent workflows, frontend engineering, productivity, game development, personal growth
+> Language: Korean (한국어)
+> URL: {{ site.url }}
+
+## Posts
+{% for post in site.posts -%}
+- [{{ post.title }}]({{ site.url }}{{ post.url }}) — {{ post.date | date: "%Y-%m-%d" }}{% if post.categories.size > 0 %} [{{ post.categories | join: ", " }}]{% endif %}{% if post.tags.size > 0 %} Tags: {{ post.tags | join: ", " }}{% endif %}
+{% if post.description %}  Summary: {{ post.description }}
+{% endif %}
+{% endfor %}
+
+## Navigation
+- Homepage: {{ site.url }}/
+- Full Content Index (AI): {{ site.url }}/llms-full.txt
+- RSS Feed: {{ site.url }}/feed.xml
+- Sitemap: {{ site.url }}/sitemap.xml
+- Categories: {{ site.url }}/categories/
+- Tags: {{ site.url }}/tags/
+- Archives: {{ site.url }}/archives/
+
+## Author
+- Name: {{ site.social.name }}
+- GitHub: https://github.com/{{ site.github.username }}
+- LinkedIn: https://www.linkedin.com/in/wontae-hwang-119b62242/

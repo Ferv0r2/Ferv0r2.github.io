@@ -6,10 +6,10 @@ theme: jekyll-theme-chirpy
 # The language of the webpage › http://www.lingoes.net/en/translator/langcode.htm
 # If it has the same name as one of the files in folder `_data/locales`, the layout language will also be changed,
 # otherwise, the layout language will use the default value of 'en'.
-lang: en
+lang: ko-KR
 
 # Change to your timezone › https://kevinnovak.github.io/Time-Zone-Picker
-timezone:
+timezone: Asia/Seoul
 
 # jekyll-seo-tag settings › https://github.com/jekyll/jekyll-seo-tag/blob/master/docs/usage.md
 # ↓ --------------------------
@@ -19,7 +19,8 @@ title: Ferv0r2 # the main title
 tagline: Front-end Engineer # it will display as the sub-title
 
 description: >- # used by seo meta and the atom feed
-  Here you'll find insightful articles, helpful tutorials, and much more.
+  Ferv0r2의 기술 블로그. 프론트엔드 개발, AI 에이전트 활용, 생산성, 1인 게임 개발, 성장 회고를 다룹니다.
+  Frontend engineering, AI agent workflows, productivity, and personal growth — written in Korean.
 
 # Fill in the protocol & hostname for your site.
 # e.g. 'https://username.github.io', note that it does not end with a '/'.
@@ -45,6 +46,10 @@ social:
     - https://www.linkedin.com/in/wontae-hwang-119b62242/
 
 google_site_verification: # fill in to your verification string
+
+locale: ko_KR
+
+logo: /assets/img/commons/avatar.png
 
 # ↑ --------------------------
 # The end of `jekyll-seo-tag` settings
@@ -191,6 +196,7 @@ exclude:
   - tools
   - README.md
   - linkedin-post.md
+  - linkedin-summary.md
   - LICENSE
   - rollup.config.js
   - package*.json

@@ -1,0 +1,55 @@
+---
+---
+User-agent: *
+Disallow: /norobots/
+
+# AI crawlers
+User-agent: GPTBot
+Disallow: /norobots/
+
+User-agent: OAI-SearchBot
+Disallow: /norobots/
+
+User-agent: ChatGPT-User
+Disallow: /norobots/
+
+User-agent: Claude-User
+Disallow: /norobots/
+
+User-agent: ClaudeBot
+Disallow: /norobots/
+
+User-agent: anthropic-ai
+Disallow: /norobots/
+
+User-agent: Google-Extended
+Disallow: /norobots/
+
+User-agent: GoogleOther
+Disallow: /norobots/
+
+User-agent: PerplexityBot
+Disallow: /norobots/
+
+User-agent: Perplexity-User
+Disallow: /norobots/
+
+User-agent: Applebot-Extended
+Disallow: /norobots/
+
+User-agent: Amazonbot
+Disallow: /norobots/
+
+User-agent: cohere-ai
+Disallow: /norobots/
+
+User-agent: CCBot
+Disallow: /norobots/
+
+User-agent: meta-externalagent
+Disallow: /norobots/
+
+User-agent: FacebookBot
+Disallow: /norobots/
+
+Sitemap: {{ site.url }}/sitemap.xml

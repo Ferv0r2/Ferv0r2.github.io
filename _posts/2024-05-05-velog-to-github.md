@@ -6,6 +6,7 @@ categories: [talk]
 tags: [etc]
 render_with_liquid: false
 image: /assets/img/post/20240505/banner.png
+description: Velog에서 GitHub Pages로 블로그 플랫폼을 이전한 이유와 Jekyll 초기 설정 과정을 공유합니다.
 ---
 
 ## 플랫폼 이주
