@@ -3,6 +3,7 @@ title: "AI 에이전트와 함께 일한다는 것 — OpenClaw 후기"
 description: "AI 코딩 에이전트 도입의 실제 효과와 한계 — PR 생성부터 검증까지의 워크플로우와, 10배 생산성 신화 이면의 현실을 과장 없이 기록합니다."
 author: Ferv0r2
 date: 2026-02-11 20:50:00 +0900
+last_modified_at: 2026-02-11 20:50:00 +0900
 categories: [growth, reflection]
 tags: [ai, coding-agent, productivity, developer, claude, technical-debt]
 render_with_liquid: false

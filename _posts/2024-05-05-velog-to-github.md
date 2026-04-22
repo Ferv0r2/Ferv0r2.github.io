@@ -2,6 +2,7 @@
 title: Velog to Github
 author: Ferv0r2
 date: 2024-05-05 14:08:00 +0900
+last_modified_at: 2024-05-05 14:08:00 +0900
 categories: [talk]
 tags: [etc]
 render_with_liquid: false

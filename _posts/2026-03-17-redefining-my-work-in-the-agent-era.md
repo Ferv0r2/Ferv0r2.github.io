@@ -3,6 +3,7 @@ title: "에이전트 시대, 내가 하는 일의 정의가 바뀌었다"
 description: "AI 에이전트 시대에 개발자의 역할이 코드 작성자에서 설계자·검증자·시스템 운영자로 이동하는 과정을, 실제 에이전트 활용 경험을 바탕으로 정리합니다."
 author: Ferv0r2
 date: 2026-03-17 20:15:00 +0900
+last_modified_at: 2026-03-17 20:15:00 +0900
 categories: [growth, reflection]
 tags: [ai, agent, engineering, developer, productivity, memory, automation]
 render_with_liquid: false
