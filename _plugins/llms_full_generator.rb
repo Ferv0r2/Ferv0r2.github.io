@@ -46,9 +46,6 @@ module Jekyll
         tags = Array(post.data["tags"]).reject(&:empty?)
         lines << "Tags: #{tags.join(", ")}" unless tags.empty?
 
-        desc = post.data["description"].to_s.strip
-        lines << "Summary: #{desc}" unless desc.empty?
-
         lines << ""
         lines << raw_markdown(post.path)
         lines << ""

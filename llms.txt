@@ -13,8 +13,6 @@ permalink: /llms.txt
 ## Posts
 {% for post in site.posts -%}
 - [{{ post.title }}]({{ site.url }}{{ post.url }}) — {{ post.date | date: "%Y-%m-%d" }}{% if post.categories.size > 0 %} [{{ post.categories | join: ", " }}]{% endif %}{% if post.tags.size > 0 %} Tags: {{ post.tags | join: ", " }}{% endif %}
-{% if post.description %}  Summary: {{ post.description }}
-{% endif %}
 {% endfor %}
 
 ## Navigation
