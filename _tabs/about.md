@@ -8,6 +8,8 @@ order: 4
 
 Product Engineer로 일하고 있습니다. 빠르게 만들고, 직접 부딪히고, 그 과정에서 배운 것들을 글로 남깁니다.
 
+**[포트폴리오 보기](https://wontae.net)**
+
 ## 관심사
 
 - **AI 에이전트 활용** — Claude, Cursor 등 코딩 에이전트를 실무에 녹이는 방법
