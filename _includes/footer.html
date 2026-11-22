@@ -1,43 +1,9 @@
-<!-- The Footer -->
-
-<footer
-  aria-label="Site Info"
-  class="
-    d-flex flex-column justify-content-center text-muted
-    flex-lg-row justify-content-lg-between align-items-lg-center pb-lg-3
-  "
->
+<footer aria-label="사이트 정보" class="d-flex flex-column justify-content-center text-muted">
   <nav class="mobile-contacts" aria-label="연락처와 구독">{% include contact-links.html %}</nav>
-  <p>
-    {{- '©' }}
-    <time>{{ 'now' | date: '%Y' }}</time>
-
-    {% if site.social.links %}
-      <a href="{{ site.social.links[0] }}">{{ site.social.name }}</a>.
-    {% else %}
-      <em class="fst-normal">{{ site.social.name }}</em>.
-    {% endif %}
-
-    {% if site.data.locales[include.lang].copyright.brief %}
-      <span
-        data-bs-toggle="tooltip"
-        data-bs-placement="top"
-        title="{{ site.data.locales[include.lang].copyright.verbose }}"
-      >
-        {{- site.data.locales[include.lang].copyright.brief -}}
-      </span>
-    {% endif %}
-  </p>
-
-  <p>
-    {%- capture _platform -%}
-      <a href="https://jekyllrb.com" target="_blank" rel="noopener">Jekyll</a>
-    {%- endcapture -%}
-
-    {%- capture _theme -%}
-      <a href="https://github.com/cotes2020/jekyll-theme-chirpy" target="_blank" rel="noopener">Chirpy</a>
-    {%- endcapture -%}
-
-    {{ site.data.locales[include.lang].meta | replace: ':PLATFORM', _platform | replace: ':THEME', _theme }}
+  {% assign copyright = site.data.locales.en.copyright %}
+  <p lang="en">
+    © <time>{{ site.time | date: '%Y' }}</time>
+    <a href="{{ site.social.links | first | default: '/' | relative_url }}">{{ site.social.name | default: site.title | escape }}</a>.
+    <a rel="license" href="{{ copyright.license.link }}" title="{{ copyright.verbose | escape }}">{{ copyright.brief }}</a>
   </p>
 </footer>

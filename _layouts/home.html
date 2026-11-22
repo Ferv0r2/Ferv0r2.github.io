@@ -38,13 +38,34 @@ layout: default
       <div class="list-head"><h2 id="list-title">{% if paginator.page == 1 %}지난 글{% else %}글 목록{% endif %}</h2>
         <a href="{{ '/archives/' | relative_url }}">전체 아카이브 <span aria-hidden="true">↗</span></a>
       </div>
-      <ol>{% for story in stories %}
-        <li><a href="{{ story.url | relative_url }}">
-          <time datetime="{{ story.date | date_to_xmlschema }}">{{ story.date | date: '%Y.%m.%d' }}</time>
-          <span class="story-title">{{ story.title | escape }}</span>
-          <span class="story-section">{{ story.categories | last | escape }}</span>
-        </a></li>
-      {% endfor %}</ol>
+      <ol>
+        {% for story in stories %}
+          <li>
+            <a href="{{ story.url | relative_url }}">
+              <div class="story-text">
+                <div class="story-details">
+                  <time datetime="{{ story.date | date_to_xmlschema }}">{{ story.date | date: '%Y.%m.%d' }}</time>
+                  <span class="story-section">{{ story.categories | last | escape }}</span>
+                </div>
+                <span class="story-title">{{ story.title | escape }}</span>
+                {% if story.description %}<p>{{ story.description | strip_html | escape }}</p>{% endif %}
+              </div>
+              {% if story.image %}
+                {% assign cover = story.image.path | default: story.image %}
+                {% capture thumb_path %}/assets/img/thumbs/{{ story.slug }}.webp{% endcapture %}
+                {% assign thumb = site.static_files | where: 'path', thumb_path | first %}
+                <div class="story-thumb">
+                  {% if thumb %}
+                    <img src="{{ thumb.path | relative_url }}" width="128" height="80" alt="">
+                  {% else %}
+                    <img src="{% include img-url.html src=cover img_path=story.img_path %}" width="128" height="80" alt="">
+                  {% endif %}
+                </div>
+              {% endif %}
+            </a>
+          </li>
+        {% endfor %}
+      </ol>
     </section>
   {% endif %}
   {% if paginator.total_pages > 1 %}{% include post-paginator.html %}{% endif %}

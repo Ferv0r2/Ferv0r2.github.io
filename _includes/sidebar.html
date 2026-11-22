@@ -1,6 +1,11 @@
 <header class="mast">
   <div class="mast-inner">
     <div class="identity">
+      {% if site.avatar %}
+        <a class="profile-photo" href="{{ '/about/' | relative_url }}" aria-label="{{ site.title | escape }} 소개">
+          <img src="{% include img-url.html src=site.avatar %}" alt="" width="68" height="68">
+        </a>
+      {% endif %}
       <a class="wordmark" href="{{ '/' | relative_url }}">{{ site.title }}</a>
       <span class="role">{{ site.tagline }}</span>
     </div>
