@@ -1,0 +1,17 @@
+{% assign words = include.content | strip_html | number_of_words: 'auto' %}
+{% assign minutes = words | divided_by: 180 | at_least: 1 %}
+{% assign locale = site.data.locales[include.lang].post %}
+{% assign language = include.lang | split: '-' | first %}
+
+<span class="readtime" data-bs-toggle="tooltip" data-bs-placement="bottom" title="{{ words }} {{ locale.words }}">
+  {%- if language == 'ko' -%}
+    {% if include.prompt %}읽는 데 약 {% endif %}<em>{{ minutes }}{{ locale.read_time.unit }}</em>
+  {%- else -%}
+    <em>{{ minutes }} {{ locale.read_time.unit }}</em>
+    {%- if include.prompt -%}
+      {%- assign prompt_words = locale.read_time.prompt | number_of_words: 'auto' -%}
+      {%- unless prompt_words > 1 -%}{{ ' ' }}{%- endunless -%}
+      {{ locale.read_time.prompt }}
+    {%- endif -%}
+  {%- endif -%}
+</span>
