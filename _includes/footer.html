@@ -1,9 +1,8 @@
 <footer aria-label="사이트 정보" class="d-flex flex-column justify-content-center text-muted">
   <nav class="mobile-contacts" aria-label="연락처와 구독">{% include contact-links.html %}</nav>
-  {% assign copyright = site.data.locales.en.copyright %}
   <p lang="en">
     © <time>{{ site.time | date: '%Y' }}</time>
     <a href="{{ site.social.links | first | default: '/' | relative_url }}">{{ site.social.name | default: site.title | escape }}</a>.
-    <a rel="license" href="{{ copyright.license.link }}" title="{{ copyright.verbose | escape }}">{{ copyright.brief }}</a>
+    All rights reserved.
   </p>
 </footer>
