@@ -2,9 +2,10 @@
   <div id="topbar" class="journal-bar">
     <nav id="topbar-title" aria-label="주 메뉴">
       <a href="{{ '/' | relative_url }}"{% if page.layout == 'home' %} aria-current="page"{% endif %}>홈</a>
+      {% assign section = page.url | split: '/' %}
       {% for tab in site.tabs %}
         {% assign key = tab.url | split: '/' | last %}
-        <a href="{{ tab.url | relative_url }}"{% if page.url == tab.url %} aria-current="page"{% endif %}>{{ site.data.locales[include.lang].tabs[key] | default: tab.title }}</a>
+        <a href="{{ tab.url | relative_url }}"{% if page.url == tab.url %} aria-current="page"{% elsif section[1] == key %} aria-current="location"{% endif %}>{{ site.data.locales[include.lang].tabs[key] | default: tab.title }}</a>
       {% endfor %}
     </nav>
     <button type="button" id="search-trigger" aria-label="글 검색"><span class="lens" aria-hidden="true"></span></button>
