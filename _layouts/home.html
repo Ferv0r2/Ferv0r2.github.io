@@ -19,7 +19,7 @@ layout: default
         </div>
         <h1><a href="{{ lead.url | relative_url }}">{{ lead.title | escape }}</a></h1>
         <p>{{ lead.description | default: lead.excerpt | strip_html | strip | truncate: 168 | escape }}</p>
-        <a class="read-story" href="{{ lead.url | relative_url }}" aria-label="{{ lead.title | escape }} 읽기">글 읽기 <span aria-hidden="true">↗</span></a>
+        <a class="read-story" href="{{ lead.url | relative_url }}" aria-label="{{ lead.title | escape }} 읽기">글 읽기 <span aria-hidden="true">›</span></a>
       </div>
       {% if lead.image %}
         {% assign cover = lead.image.path | default: lead.image %}
@@ -36,7 +36,7 @@ layout: default
   {% if stories.size > 0 %}
     <section class="story-list" aria-labelledby="list-title">
       <div class="list-head"><h2 id="list-title">{% if paginator.page == 1 %}지난 글{% else %}글 목록{% endif %}</h2>
-        <a href="{{ '/archives/' | relative_url }}">전체 아카이브 <span aria-hidden="true">↗</span></a>
+        <a href="{{ '/archives/' | relative_url }}">전체 아카이브 <span aria-hidden="true">›</span></a>
       </div>
       <ol>
         {% for story in stories %}
