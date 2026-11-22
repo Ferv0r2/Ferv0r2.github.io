@@ -54,7 +54,7 @@ body {
   word-break: keep-all;
   overflow-wrap: anywhere;
 }
-.mast { border-top: 6px solid var(--blue); }
+.mast { border-top: 3px solid var(--blue); }
 .mast-inner, #main-wrapper > .container {
   box-sizing: content-box;
   max-width: var(--journal-width);
@@ -67,31 +67,30 @@ body {
   justify-content: space-between;
   align-items: center;
   gap: 1.5rem;
-  padding-top: 28px !important;
-  padding-bottom: 24px !important;
+  padding-top: 22px !important;
+  padding-bottom: 20px !important;
 }
 .identity, .mast-tools, .journal-bar, #topbar-title, .story-meta, .list-head { display: flex; align-items: center; }
-.identity { gap: clamp(16px, 2.3vw, 34px); }
+.identity { gap: clamp(12px, 1.5vw, 20px); }
+.mast-byline { display: grid; justify-items: start; gap: 3px; }
 .profile-photo { display: block; flex: none; }
 .profile-photo img {
   display: block;
-  width: clamp(50px, 5vw, 68px);
+  width: clamp(48px, 5vw, 60px);
   height: auto;
   aspect-ratio: 1;
   border-radius: 50%;
 }
 .wordmark {
-  font: italic 800 clamp(44px, 5.3vw, 78px)/.9 Georgia, 'Times New Roman', serif;
-  letter-spacing: -.085em;
-  padding-right: .09em;
+  font: 700 clamp(34px, 4.3vw, 54px)/.96 Baskerville, Georgia, serif;
+  font-variant-numeric: lining-nums;
+  letter-spacing: -.038em;
   color: var(--blue);
 }
 .wordmark:hover { color: var(--blue); }
 .role {
-  border-left: 1px solid var(--rule);
-  padding: .45rem 0 .45rem clamp(12px, 2vw, 28px);
-  font: 600 clamp(12px, 1.1vw, 15px)/1.35 var(--mono);
-  letter-spacing: -.045em;
+  color: var(--secondary);
+  font: 500 clamp(12px, 1vw, 14px)/1.4 var(--mono);
 }
 .mast-tools { gap: 15px; }
 .mast-tools a, .list-head a {
@@ -301,10 +300,6 @@ main .content blockquote:not([class]) p { margin: 0; }
   .lead-art { grid-row: 1; }
   .lead-story h1 { margin: 11px 0 8px; font-size: clamp(32px, 8vw, 46px); }
   .journal-bar { min-height: 45px; }
-  .identity { display: grid; grid-template-columns: auto 1fr; gap: 4px 12px; }
-  .profile-photo { grid-row: span 2; }
-  .profile-photo img { width: 48px; }
-  .identity .role { grid-column: -2; padding: 0; border: 0; }
   .story-list li a { gap: 14px; padding: 12px 0; }
   .story-text p { display: none; }
   .story-thumb { width: clamp(76px, 22vw, 100px); }

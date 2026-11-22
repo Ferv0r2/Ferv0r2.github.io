@@ -6,8 +6,10 @@
           <img src="{% include img-url.html src=site.avatar %}" alt="" width="68" height="68">
         </a>
       {% endif %}
-      <a class="wordmark" href="{{ '/' | relative_url }}">{{ site.title }}</a>
-      <span class="role">{{ site.tagline }}</span>
+      <div class="mast-byline">
+        <a class="wordmark" href="{{ '/' | relative_url }}">{{ site.title }}</a>
+        <span class="role">{{ site.tagline }}</span>
+      </div>
     </div>
     <div class="mast-tools">
       {% include contact-links.html %}
