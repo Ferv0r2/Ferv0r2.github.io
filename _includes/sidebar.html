@@ -1,0 +1,14 @@
+<header class="mast">
+  <div class="mast-inner">
+    <div class="identity">
+      <a class="wordmark" href="{{ '/' | relative_url }}">{{ site.title }}</a>
+      <span class="role">{{ site.tagline }}</span>
+    </div>
+    <div class="mast-tools">
+      {% include contact-links.html %}
+      {% unless site.theme_mode %}
+        <button class="mode-toggle" type="button" aria-label="밝은 화면과 어두운 화면 전환" title="화면 밝기 전환"><span aria-hidden="true">◐</span></button>
+      {% endunless %}
+    </div>
+  </div>
+</header>

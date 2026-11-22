@@ -1,0 +1,11 @@
+{% for contact in site.data.contact %}
+  {% assign label = contact.type %}
+  {% case contact.type %}
+    {% when 'github' %}{% assign url = 'https://github.com/' | append: site.github.username %}{% assign label = 'GitHub' %}
+    {% when 'linkedin' %}{% assign url = contact.url %}{% assign label = 'LinkedIn' %}
+    {% when 'rss' %}{% assign url = '/feed.xml' | relative_url %}{% assign label = 'RSS' %}
+    {% when 'email' %}{% assign url = 'mailto:' | append: site.social.email %}{% assign label = 'Email' %}
+    {% else %}{% assign url = contact.url %}
+  {% endcase %}
+  {% if url %}<a href="{{ url | escape }}">{{ label | escape }}</a>{% endif %}
+{% endfor %}

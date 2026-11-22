@@ -1,0 +1,51 @@
+---
+layout: default
+---
+
+{% include lang.html %}
+{% assign pinned = site.posts | where: 'pin', true %}
+{% assign regular = site.posts | where_exp: 'post', 'post.pin != true and post.hidden != true' %}
+{% assign offset = paginator.page | minus: 1 | times: paginator.per_page %}
+{% assign posts = pinned | concat: regular | slice: offset, paginator.per_page %}
+
+<div class="journal-index">
+  {% if paginator.page == 1 and posts.size > 0 %}
+    {% assign lead = posts.first %}
+    <article class="lead-story{% unless lead.image %} type-only{% endunless %}">
+      <div class="lead-copy">
+        <div class="story-meta">
+          <span>{% if lead.pin %}고정 글{% else %}최근 글{% endif %}</span>
+          <time datetime="{{ lead.date | date_to_xmlschema }}">{{ lead.date | date: '%Y.%m.%d' }}</time>
+        </div>
+        <h1><a href="{{ lead.url | relative_url }}">{{ lead.title | escape }}</a></h1>
+        <p>{{ lead.description | default: lead.excerpt | strip_html | strip | truncate: 168 | escape }}</p>
+        <a class="read-story" href="{{ lead.url | relative_url }}" aria-label="{{ lead.title | escape }} 읽기">글 읽기 <span aria-hidden="true">↗</span></a>
+      </div>
+      {% if lead.image %}
+        {% assign cover = lead.image.path | default: lead.image %}
+        <a class="lead-art" href="{{ lead.url | relative_url }}" aria-label="{{ lead.title | escape }} 읽기" tabindex="-1">
+          <img src="{% include img-url.html src=cover img_path=lead.img_path %}" alt="{{ lead.image.alt | default: '' | escape }}" width="1200" height="630">
+        </a>
+      {% endif %}
+    </article>
+    {% assign stories = posts | shift %}
+  {% else %}
+    {% assign stories = posts %}
+  {% endif %}
+
+  {% if stories.size > 0 %}
+    <section class="story-list" aria-labelledby="list-title">
+      <div class="list-head"><h2 id="list-title">{% if paginator.page == 1 %}지난 글{% else %}글 목록{% endif %}</h2>
+        <a href="{{ '/archives/' | relative_url }}">전체 아카이브 <span aria-hidden="true">↗</span></a>
+      </div>
+      <ol>{% for story in stories %}
+        <li><a href="{{ story.url | relative_url }}">
+          <time datetime="{{ story.date | date_to_xmlschema }}">{{ story.date | date: '%Y.%m.%d' }}</time>
+          <span class="story-title">{{ story.title | escape }}</span>
+          <span class="story-section">{{ story.categories | last | escape }}</span>
+        </a></li>
+      {% endfor %}</ol>
+    </section>
+  {% endif %}
+  {% if paginator.total_pages > 1 %}{% include post-paginator.html %}{% endif %}
+</div>

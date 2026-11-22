@@ -1,0 +1,17 @@
+<header id="topbar-wrapper">
+  <div id="topbar" class="journal-bar">
+    <nav id="topbar-title" aria-label="주 메뉴">
+      <a href="{{ '/' | relative_url }}"{% if page.layout == 'home' %} aria-current="page"{% endif %}>홈</a>
+      {% for tab in site.tabs %}
+        {% assign key = tab.url | split: '/' | last %}
+        <a href="{{ tab.url | relative_url }}"{% if page.url == tab.url %} aria-current="page"{% endif %}>{{ site.data.locales[include.lang].tabs[key] | default: tab.title }}</a>
+      {% endfor %}
+    </nav>
+    <button type="button" id="search-trigger" aria-label="글 검색"><span class="lens" aria-hidden="true"></span></button>
+    <search>
+      <span class="lens" aria-hidden="true"></span>
+      <input id="search-input" class="form-control" type="search" aria-label="글 검색" placeholder="글 검색" autocomplete="off">
+    </search>
+    <button type="button" id="search-cancel">닫기</button>
+  </div>
+</header>
