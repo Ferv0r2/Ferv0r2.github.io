@@ -2,6 +2,17 @@
 ---
 @import 'main';
 
+/* 글 속 강조 상자(> … {: .prompt-tip } 등)를 블로그 색에 맞춘다 */
+@mixin journal-prompts {
+  --prompt-tip-bg: color-mix(in srgb, var(--blue) 11%, var(--paper));
+  --prompt-tip-icon-color: var(--blue);
+  --prompt-info-bg: var(--wash);
+  --prompt-info-icon-color: var(--secondary);
+  --prompt-warning-bg: color-mix(in srgb, var(--foil) 20%, var(--paper));
+  --prompt-danger-bg: color-mix(in srgb, var(--red) 12%, var(--paper));
+  --prompt-danger-icon-color: var(--red);
+}
+
 @mixin journal-light {
   --paper: #f8f6ee;
   --ink: #18203c;
@@ -10,6 +21,9 @@
   --secondary: #54586a;
   --rule: #c8c6bb;
   --wash: #f4eacd;
+  --red: #b23a26;
+  --prompt-warning-icon-color: #a87809;
+  @include journal-prompts;
 }
 
 @mixin journal-dark {
@@ -20,6 +34,9 @@
   --secondary: #b7bbc9;
   --rule: #424958;
   --wash: #312e28;
+  --red: #ff8f7a;
+  --prompt-warning-icon-color: var(--foil);
+  @include journal-prompts;
 }
 
 html:root {
@@ -300,6 +317,89 @@ body {
   line-height: 1.7;
   color: var(--secondary);
 }
+/* 상자 안 마지막 문단의 아래 여백이 상자 안에 빈칸으로 남지 않게 한다 */
+main .content blockquote > :last-child { margin-bottom: 0 !important; }
+/* "처음엔 이렇게 답했어요" 상자({: .answer }). 첫 문단은 이름표, 둘째 문단은 내 답(말풍선), 나머지는 풀이 */
+main .content blockquote.answer {
+  margin: 1.8em 0;
+  padding: 18px 22px 20px;
+  border: 1px solid var(--rule);
+  border-radius: 14px;
+  background: transparent;
+  color: var(--ink);
+}
+main .content blockquote.answer > p:first-child {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin: 0 0 10px;
+  font-size: 13px;
+  font-weight: 700;
+  color: var(--secondary);
+}
+main .content blockquote.answer > p:first-child::before {
+  content: "";
+  flex: none;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--foil);
+}
+main .content blockquote.answer > p:nth-child(2) {
+  display: inline-block;
+  max-width: 100%;
+  margin: 0 0 14px;
+  padding: 10px 16px;
+  border-radius: 16px 16px 16px 4px;
+  background: color-mix(in srgb, var(--ink) 9%, var(--paper));
+  font-weight: 600;
+  line-height: 1.6;
+}
+main .content blockquote.answer > p:nth-child(n+3) { margin: 0 0 .6em; font-size: 16px; line-height: 1.8; }
+/* "→ 그래서 실제로는" 줄({: .practice }) */
+main .content blockquote.practice {
+  margin: 1.4em 0;
+  padding: 2px 0 2px 16px;
+  border-left: 3px solid var(--blue);
+  background: none;
+  color: var(--ink);
+}
+main .content blockquote.practice strong:first-child { color: var(--blue); }
+/* 표 칸의 글이 줄바꿈되게 한다. 테마 기본값(nowrap)은 휴대폰에서 오른쪽 칸을 잘라 낸다. */
+main .content .table-wrapper > table th,
+main .content .table-wrapper > table td { white-space: normal; }
+/* 글 속 그림.<figure class="fig"><svg viewBox="0 0 W H" style="max-width:Wpx">…</svg><figcaption>…</figcaption></figure>
+   색은 아래 클래스로만 칠해서 밝은 화면과 어두운 화면을 따라가게 한다. */
+.fig { margin: 2.2em 0; }
+.fig svg { display: block; width: 100%; height: auto; margin: 0 auto; overflow: visible; }
+.fig figcaption { margin-top: 12px; font: 14px/1.6 var(--sans); color: var(--secondary); text-align: center; }
+.fig text { fill: var(--ink); font-family: var(--sans); font-size: 17px; letter-spacing: -.02em; }
+.fig text.sm { font-size: 14px; }
+.fig text.lg { font-size: 21px; font-weight: 700; }
+.fig text.mono { font-family: var(--mono); letter-spacing: 0; }
+.fig text.bold { font-weight: 700; }
+.fig text.muted { fill: var(--secondary); }
+.fig text.blue { fill: var(--blue); }
+.fig text.red { fill: var(--red); }
+.fig text.on-solid { fill: var(--paper); }
+.fig .box { fill: var(--paper); stroke: var(--rule); stroke-width: 1.5; }
+.fig .wash { fill: var(--wash); }
+.fig .box-blue { fill: color-mix(in srgb, var(--blue) 14%, var(--paper)); stroke: var(--blue); stroke-width: 1.5; }
+.fig .box-foil { fill: color-mix(in srgb, var(--foil) 26%, var(--paper)); stroke: var(--foil); stroke-width: 1.5; }
+.fig .box-red { fill: color-mix(in srgb, var(--red) 14%, var(--paper)); stroke: var(--red); stroke-width: 1.5; }
+.fig .solid-blue { fill: var(--blue); }
+.fig .solid-foil { fill: var(--foil); }
+.fig .solid-red { fill: var(--red); }
+.fig .solid-ink { fill: var(--ink); }
+.fig .solid-rule { fill: var(--rule); }
+.fig .line { fill: none; stroke: var(--secondary); stroke-width: 1.5; }
+.fig .line-blue { fill: none; stroke: var(--blue); stroke-width: 2.5; }
+.fig .line-red { fill: none; stroke: var(--red); stroke-width: 2.5; }
+.fig .line-foil { fill: none; stroke: var(--foil); stroke-width: 2.5; }
+.fig .dash { stroke-dasharray: 6 5; }
+.fig .arrow-head { fill: var(--secondary); }
+.fig .arrow-head-blue { fill: var(--blue); }
+.fig .arrow-head-red { fill: var(--red); }
 #main-wrapper .container main:not(:has(.journal-index)) { padding: 0 !important; }
 main article > header h1, main h1.dynamic-title {
   display: block;
