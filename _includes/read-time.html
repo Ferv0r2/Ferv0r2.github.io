@@ -1,7 +1,11 @@
+{% comment %}
+  'auto'는 한글을 글자 하나마다 낱말 하나로 센다. 한국어는 분당 약 500자, 그 밖의 말은 분당 180낱말로 계산한다.
+{% endcomment %}
 {% assign words = include.content | strip_html | number_of_words: 'auto' %}
-{% assign minutes = words | divided_by: 180 | at_least: 1 %}
 {% assign locale = site.data.locales[include.lang].post %}
 {% assign language = include.lang | split: '-' | first %}
+{% if language == 'ko' %}{% assign per_minute = 500 %}{% else %}{% assign per_minute = 180 %}{% endif %}
+{% assign minutes = words | divided_by: per_minute | at_least: 1 %}
 
 <span class="readtime" data-bs-toggle="tooltip" data-bs-placement="bottom" title="{{ words }} {{ locale.words }}">
   {%- if language == 'ko' -%}
