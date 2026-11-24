@@ -1,0 +1,13 @@
+<script>
+  /* 목록 썸네일이나 대표 그림을 못 불러오면 깨진 그림 표시 대신 그 칸을 감춘다.
+     그림보다 먼저 실행되도록 목록 앞에 둔다. */
+  document.addEventListener('error', function (event) {
+    var img = event.target;
+    if (!(img instanceof HTMLImageElement)) return;
+    var box = img.closest('.story-thumb, .lead-art');
+    if (!box) return;
+    box.style.display = 'none';
+    var lead = box.closest('.lead-story');
+    if (lead) lead.classList.add('type-only');
+  }, true);
+</script>

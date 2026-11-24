@@ -2,6 +2,7 @@
 layout: default
 ---
 
+{% include img-fallback.html %}
 {% assign section = site.data.sections[page.section] %}
 {% assign stories = site.posts | where: 'section', page.section | where_exp: 'post', 'post.hidden != true' %}
 

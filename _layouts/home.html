@@ -3,6 +3,7 @@ layout: default
 ---
 
 {% include lang.html %}
+{% include img-fallback.html %}
 {% assign listed = site.posts | where_exp: 'post', 'post.hidden != true' %}
 {% assign lead = listed.first %}
 
