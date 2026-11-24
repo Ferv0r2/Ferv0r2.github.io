@@ -3,7 +3,7 @@ title: "(오늘이 마감인) 앱인토스 HTML5 공모전 도전기"
 description: "게임 개발 경험 제로, 남은 시간 45일. 조선 설화를 배경으로 한 로그라이크 게임 '설화'의 탄생 이야기"
 author: Ferv0r2
 date: 2025-11-17 21:00:00 +0900
-categories: [Game Development, Project]
+categories: [retrospective, project]
 tags: [HTML5, Game, Toss, Roguelike, Indie]
 render_with_liquid: false
 image: https://static.toss.im/illusts/app-in-toss-og-gmae-challenge.png

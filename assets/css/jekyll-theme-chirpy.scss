@@ -273,6 +273,33 @@ body {
 .story-list time, .story-section { font: 12px/1.4 var(--mono); color: var(--secondary); }
 .story-title { font: 700 clamp(19px, 2vw, 26px)/1.32 var(--sans); letter-spacing: -.047em; }
 .story-section { text-align: right; }
+.section-columns {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: clamp(28px, 4vw, 56px);
+  align-items: start;
+}
+.section-columns .story-title { font-size: clamp(18px, 1.5vw, 22px); }
+.section-intro {
+  margin: 0;
+  padding: 12px 0;
+  border-bottom: 1px solid var(--rule);
+  font: 14px/1.6 var(--sans);
+  color: var(--secondary);
+}
+.section-head { padding: clamp(26px, 3.4vw, 48px) 0 clamp(18px, 2vw, 28px); }
+.section-head h1 {
+  margin: 0 0 10px;
+  font: 800 clamp(36px, 4.3vw, 62px)/1.12 var(--sans);
+  letter-spacing: -.067em;
+  color: var(--ink);
+}
+.section-head p {
+  margin: 0;
+  font-size: clamp(15px, 1.25vw, 18px);
+  line-height: 1.7;
+  color: var(--secondary);
+}
 #main-wrapper .container main:not(:has(.journal-index)) { padding: 0 !important; }
 main article > header h1, main h1.dynamic-title {
   display: block;
@@ -301,9 +328,11 @@ main .content blockquote:not([class]) p { margin: 0; }
 }
 @media (max-width: 849px) {
   #topbar search.d-flex { width: 100%; }
-  #topbar-title { gap: 0; }
+  #topbar-title { gap: 0; flex: 1 1 auto; min-width: 0; overflow-x: auto; scrollbar-width: none; }
+  #topbar-title::-webkit-scrollbar { display: none; }
   #topbar-title.unloaded { display: none; }
   .mast-tools { gap: 10px; }
+  .section-columns { grid-template-columns: 1fr; }
 }
 @media (max-width: 680px) {
   .mast-inner { gap: 8px; padding-top: 19px !important; padding-bottom: 17px !important; }

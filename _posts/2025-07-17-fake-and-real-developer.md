@@ -3,7 +3,7 @@ title: "'가짜 개발자'라는 자기 의심을 넘어, 진짜 '제품 메이�
 description: "입사 2주년을 앞두고 겪었던 정체성 혼란과 그 속에서 찾은 성장에 대한 회고"
 author: Ferv0r2
 date: 2025-07-17 01:00:00 +0900
-categories: [growth, reflection]
+categories: [growth, career]
 tags: [identity, developer, maker, growth, career-development, self-doubt, generalist]
 render_with_liquid: false
 image: /assets/img/post/20250717/banner.jpg

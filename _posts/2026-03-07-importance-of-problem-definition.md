@@ -4,7 +4,7 @@ description: "AI 시대에 문제 정의 능력이 더 중요해진 이유와, �
 author: Ferv0r2
 date: 2026-03-07 12:30:00 +0900
 last_modified_at: 2026-03-07 12:30:00 +0900
-categories: [growth, reflection]
+categories: [growth, ai-era]
 tags: [ai, problem-solving, developer, productivity, product, architecture]
 render_with_liquid: false
 image:

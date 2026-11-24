@@ -4,7 +4,7 @@ description: "같은 장면을 보고도 누군가는 십 년 뒤를 쓰고, 나
 author: Ferv0r2
 date: 2026-10-05 18:00:00 +0900
 last_modified_at: 2026-10-05 18:00:00 +0900
-categories: [growth, reflection]
+categories: [growth, ai-era]
 tags: [ai, perspective, insight, automation, startup, llm]
 render_with_liquid: false
 image: /assets/img/post/20261005/banner.png

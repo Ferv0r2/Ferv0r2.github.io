@@ -3,7 +3,7 @@ title: "2025년 회고 - 계속 만드는 사람으로 남기 위해"
 description: "한 해를 돌아보며 스스로에게 피드백을 가져봅니다."
 author: Ferv0r2
 date: 2025-12-30 01:50:00 +0900
-categories: [retrospective, growth]
+categories: [retrospective, yearly]
 tags: [회고, "2025", 성장]
 render_with_liquid: false
 image: /assets/img/post/20251230/banner.png

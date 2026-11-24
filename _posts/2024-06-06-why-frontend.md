@@ -3,7 +3,7 @@ title: Talk - 나는 왜 프론트엔드 개발자가 되었는가?
 description: 많은 선택지 중에서 왜 프론트엔드 개발자가 되었을까?
 author: Ferv0r2
 date: 2024-06-06 22:57:00 +0900
-categories: [talk, frontend]
+categories: [growth, career]
 tags: [frontend, developer]
 render_with_liquid: false
 image: /assets/img/post/20240606/banner.png

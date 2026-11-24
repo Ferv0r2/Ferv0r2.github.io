@@ -3,7 +3,7 @@ title: "AI 서비스를 활용한 1인 게임 개발: Kepler Pop 프로젝트 �
 description: "프론트엔드 개발자가 AI 도구(Claude, ChatGPT, v0, Cursor)를 활용하여 우주 식물 테마 퍼즐 게임을 혼자 개발한 과정과 경험을 공유합니다."
 author: Ferv0r2
 date: 2025-05-17 18:00:00 +0900
-categories: [Project, Game]
+categories: [ai, tools]
 tags: [ai, game-development, mvp, react-native, webview, claude, chatgpt, v0, cursor, solo-project]
 render_with_liquid: false
 image: /assets/img/post/20250517/banner.png

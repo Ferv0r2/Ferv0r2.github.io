@@ -4,7 +4,7 @@ description: "AI로 빠르게 만든 제품이 실패하는 이유와 두 가지
 author: Ferv0r2
 date: 2026-04-16 22:00:00 +0900
 last_modified_at: 2026-04-16 22:00:00 +0900
-categories: [growth, reflection]
+categories: [growth, ai-era]
 tags: [ai, productivity, product, harness-engineering, agent, developer]
 render_with_liquid: false
 image:

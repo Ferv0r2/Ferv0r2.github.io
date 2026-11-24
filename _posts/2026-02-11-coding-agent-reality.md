@@ -4,7 +4,7 @@ description: "AI 코딩 에이전트 도입의 실제 효과와 한계 — PR �
 author: Ferv0r2
 date: 2026-02-11 20:50:00 +0900
 last_modified_at: 2026-02-11 20:50:00 +0900
-categories: [growth, reflection]
+categories: [growth, ai-era]
 tags: [ai, coding-agent, productivity, developer, claude, technical-debt]
 render_with_liquid: false
 image: /assets/img/post/20260211/banner.png

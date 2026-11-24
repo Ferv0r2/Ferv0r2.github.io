@@ -3,7 +3,7 @@ title: Talk - 새로운 기능과 기술 부채의 딜레마
 description: 누구나 한 번쯤 고민하는 주제에 대하여
 author: Ferv0r2
 date: 2024-06-25 22:09:00 +0900
-categories: [talk, technical debt]
+categories: [engineering, technical-debt]
 tags: [strategies, refactoring, review]
 render_with_liquid: false
 image: /assets/img/post/20240625/banner.png

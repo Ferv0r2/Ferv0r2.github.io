@@ -3,7 +3,7 @@ title: "ZERO에서 5,409까지"
 description: "게임 개발 경험 제로, 45일, 그리고 장려상. 세 얼간이의 도전 이야기"
 author: Ferv0r2
 date: 2025-12-24 15:00:00 +0900
-categories: [Game Development, Project]
+categories: [retrospective, project]
 tags: [HTML5, Game, Toss, Roguelike, Indie, Award, 도전, 성장, 팀워크]
 render_with_liquid: false
 image: /assets/img/post/20251224/banner.png

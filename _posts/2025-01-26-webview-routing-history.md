@@ -3,7 +3,7 @@ title: WebView 환경에서의 History API와 Routing 삽질기 (feat. Vue)
 description: WebView 내에서 효과적인 라우팅 관리 방법을 심화 탐구하고, 안드로이드 백버튼 이벤트 처리 방안을 제시합니다.
 author: Ferv0r2
 date: 2025-01-26 12:00:00 +0900
-categories: [frontend, webview, history,routing, mobile development, vue]
+categories: [frontend, webview]
 tags: [vue3, vue-router, webview, routing management, history API, frontend development, mobile web]
 render_with_liquid: false
 image: /assets/img/post/20250126/banner.jpg

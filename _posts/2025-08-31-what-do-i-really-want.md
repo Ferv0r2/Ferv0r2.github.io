@@ -3,7 +3,7 @@ title: "스토어에 앱을 올리며 배운 몇 가지"
 description: "케플러팝 출시와 Google Ads 운영을 통해 발견한 진정한 흥미의 방향"
 author: Ferv0r2
 date: 2025-08-31 23:40:00 +0900
-categories: [self-reflection, growth]
+categories: [retrospective, project]
 tags: [self-reflection, maker, product-development, user-behavior, google-ads, kepler-pop, personal-development]
 render_with_liquid: false
 image: /assets/img/post/20250831/banner.png

@@ -4,7 +4,7 @@ description: "AI가 코드를 싸게 만들수록, 제품이 되지 못한 것�
 author: Ferv0r2
 date: 2026-05-06 21:00:00 +0900
 last_modified_at: 2026-05-06 21:00:00 +0900
-categories: [growth, reflection]
+categories: [growth, ai-era]
 tags: [ai, agent, product, productivity, developer, payment]
 render_with_liquid: false
 image: /assets/img/post/20260506/banner.png

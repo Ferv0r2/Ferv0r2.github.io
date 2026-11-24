@@ -4,7 +4,7 @@ description: "첫 IR에서 제대로 답하지 못한 질문은, AI 시대에 �
 author: Ferv0r2
 date: 2026-07-31 00:52:30 +0900
 last_modified_at: 2026-07-31 00:52:30 +0900
-categories: [growth, reflection]
+categories: [retrospective, project]
 tags: [ai, product, hackathon, indie-game, ir, team]
 render_with_liquid: false
 image: /assets/img/post/20260731/pitch.jpeg

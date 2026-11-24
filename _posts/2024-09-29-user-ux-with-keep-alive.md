@@ -3,7 +3,7 @@ title: 사용자 경험과 컴포넌트 캐싱 (feat. Vue - KeepAlive)
 description: Vue의 KeepAlive 기능을 사용하여 사용자 경험을 개선하는 방법
 author: Ferv0r2
 date: 2024-09-29 17:01:00 +0900
-categories: [frontend, vue, ux]
+categories: [frontend, vue]
 tags: [vue, keep-alive, ux, component cache]
 render_with_liquid: false
 image: /assets/img/post/20240929/banner.png

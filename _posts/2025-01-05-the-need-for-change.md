@@ -3,7 +3,7 @@ title: 자아성찰과 변화의 필요성
 description: 업무 태도에 대해 자아성찰 후 변화의 필요성을 느끼게 된 과정을 공유합니다.
 author: Ferv0r2
 date: 2025-01-05 18:00:00 +0900
-categories: [self-reflection, productivity, personal development]
+categories: [growth, work]
 tags: [work-attitude, self-reflection, productivity, problem-solving]
 render_with_liquid: false
 image: /assets/img/post/20250105/banner.png

@@ -3,7 +3,7 @@ title: 주니어가 일정 관리를 대처하는 방법
 description: 주니어 개발자가 일정 관리에서 겪는 어려움을 극복하고, 실수로부터 배우며 성장하는 방법에 대하여
 author: Ferv0r2
 date: 2024-08-18 18:41:00 +0900
-categories: [time management, grow up]
+categories: [growth, work]
 tags: [junior, senior, project management, schedule]
 render_with_liquid: false
 image: /assets/img/post/20240818/banner.png

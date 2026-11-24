@@ -3,7 +3,7 @@ title: 왜 꼭 블록체인이어야 할까요?
 description: 21년도부터 3년 간 몸 담은 크립토 주니어의 여담
 author: Ferv0r2
 date: 2024-07-04 03:02:00 +0900
-categories: [talk, blockchain, decentralize]
+categories: [blockchain, web3]
 tags: [blockchain, finance, bank, crypto]
 render_with_liquid: false
 image: /assets/img/post/20240704/banner.png

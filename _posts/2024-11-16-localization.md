@@ -3,7 +3,7 @@ title: 다국어 지원과 사용자 경험의 중요성
 description: 글로벌 사용자에게 최적화된 경험을 제공하기 위한 다국어 지원 전략과 문화적 감수성 반영의 중요성
 author: Ferv0r2
 date: 2024-11-16 12:00:00 +0900
-categories: [frontend, user experience, localization]
+categories: [frontend, ux]
 tags: [i18n, user experience, frontend development, localization, blockchain]
 render_with_liquid: false
 image: /assets/img/post/20241116/banner.jpg

@@ -3,18 +3,16 @@ layout: default
 ---
 
 {% include lang.html %}
-{% assign pinned = site.posts | where: 'pin', true %}
-{% assign regular = site.posts | where_exp: 'post', 'post.pin != true and post.hidden != true' %}
-{% assign offset = paginator.page | minus: 1 | times: paginator.per_page %}
-{% assign posts = pinned | concat: regular | slice: offset, paginator.per_page %}
+{% assign listed = site.posts | where_exp: 'post', 'post.hidden != true' %}
+{% assign lead = listed.first %}
 
 <div class="journal-index">
-  {% if paginator.page == 1 and posts.size > 0 %}
-    {% assign lead = posts.first %}
+  {% if lead %}
+    {% assign lead_section = site.data.sections[lead.section] %}
     <article class="lead-story{% unless lead.image %} type-only{% endunless %}">
       <div class="lead-copy">
         <div class="story-meta">
-          <span>{% if lead.pin %}고정 글{% else %}최근 글{% endif %}</span>
+          <span>최근 글{% if lead_section %} · {{ lead_section.title }}{% endif %}</span>
           <time datetime="{{ lead.date | date_to_xmlschema }}">{{ lead.date | date: '%Y.%m.%d' }}</time>
         </div>
         <h1><a href="{{ lead.url | relative_url }}">{{ lead.title | escape }}</a></h1>
@@ -28,45 +26,24 @@ layout: default
         </a>
       {% endif %}
     </article>
-    {% assign stories = posts | shift %}
-  {% else %}
-    {% assign stories = posts %}
   {% endif %}
 
-  {% if stories.size > 0 %}
-    <section class="story-list" aria-labelledby="list-title">
-      <div class="list-head"><h2 id="list-title">{% if paginator.page == 1 %}지난 글{% else %}글 목록{% endif %}</h2>
-        <a href="{{ '/archives/' | relative_url }}">전체 아카이브 <span aria-hidden="true">›</span></a>
-      </div>
-      <ol>
-        {% for story in stories %}
-          <li>
-            <a href="{{ story.url | relative_url }}">
-              <div class="story-text">
-                <div class="story-details">
-                  <time datetime="{{ story.date | date_to_xmlschema }}">{{ story.date | date: '%Y.%m.%d' }}</time>
-                  <span class="story-section">{{ story.categories | last | escape }}</span>
-                </div>
-                <span class="story-title">{{ story.title | escape }}</span>
-                {% if story.description %}<p>{{ story.description | strip_html | escape }}</p>{% endif %}
-              </div>
-              {% if story.image %}
-                {% assign cover = story.image.path | default: story.image %}
-                {% capture thumb_path %}/assets/img/thumbs/{{ story.slug }}.webp{% endcapture %}
-                {% assign thumb = site.static_files | where: 'path', thumb_path | first %}
-                <div class="story-thumb">
-                  {% if thumb %}
-                    <img src="{{ thumb.path | relative_url }}" width="128" height="80" alt="">
-                  {% else %}
-                    <img src="{% include img-url.html src=cover img_path=story.img_path %}" width="128" height="80" alt="">
-                  {% endif %}
-                </div>
-              {% endif %}
-            </a>
-          </li>
-        {% endfor %}
-      </ol>
-    </section>
-  {% endif %}
-  {% if paginator.total_pages > 1 %}{% include post-paginator.html %}{% endif %}
+  <div class="section-columns">
+    {% for entry in site.data.sections %}
+      {% assign key = entry[0] %}
+      {% assign section = entry[1] %}
+      {% assign section_posts = listed | where: 'section', key %}
+      {% assign stories = section_posts | where_exp: 'post', 'post.url != lead.url' | slice: 0, 5 %}
+      <section class="story-list" aria-labelledby="section-{{ key }}">
+        <div class="list-head">
+          <h2 id="section-{{ key }}">{{ section.title }}</h2>
+          <a href="{{ section.url | relative_url }}">{{ section_posts.size }}편 모두 보기 <span aria-hidden="true">›</span></a>
+        </div>
+        <p class="section-intro">{{ section.intro }}</p>
+        <ol>
+          {% for story in stories %}{% include story-item.html story=story %}{% endfor %}
+        </ol>
+      </section>
+    {% endfor %}
+  </div>
 </div>

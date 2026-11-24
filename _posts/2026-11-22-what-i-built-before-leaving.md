@@ -3,7 +3,7 @@ title: "내가 떠나는 곳에서 만든 것"
 description: "첫 회사를 떠나기 여드레 전, 지원서에서 꿈이 뭐냐는 질문을 읽었습니다. 그 질문을 붙들고, 떠나기로 한 곳에서 아틀라스를 끝까지 만들고 싶었던 이유를 돌아봤습니다."
 author: Ferv0r2
 date: 2026-11-22 13:00:00 +0900
-categories: [growth, reflection]
+categories: [growth, career]
 tags: [retrospective, product, atlas, llm]
 render_with_liquid: false
 image:

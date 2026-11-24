@@ -3,7 +3,7 @@ title: 모던 CSS 트렌드 - CSS-in-JS, TailwindCSS, 그리고 CSS 전처리기
 description: CSS 스타일링의 최신 트렌드를 비교하고, 테마 관리와 유지보수성을 고려한 접근 방식을 제안합니다.
 author: Ferv0r2
 date: 2024-11-27 12:00:00 +0900
-categories: [frontend, css, tools]
+categories: [frontend, css]
 tags: [css-in-js, tailwindcss, sass, frontend development, css trends, design systems]
 render_with_liquid: false
 image: /assets/img/post/20241127/banner.jpg

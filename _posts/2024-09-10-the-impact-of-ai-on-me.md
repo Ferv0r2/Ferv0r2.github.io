@@ -3,7 +3,7 @@ title: AI는 우리의 업무를 얼마나 대체할 수 있을까?
 description: AI가 가져온 변화와 그 한계를 분석하고, 인간의 창의성이 왜 여전히 중요한지에 대해 다룹니다.
 author: Ferv0r2
 date: 2024-09-10 00:40:00 +0900
-categories: [ai, automation, future of work]
+categories: [growth, ai-era]
 tags: [ai, automation, work efficiency, creativity, collaboration]
 render_with_liquid: false
 image: /assets/img/post/20240910/banner.jpg

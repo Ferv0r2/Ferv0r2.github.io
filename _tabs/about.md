@@ -3,7 +3,7 @@
 title: 소개
 permalink: /about/
 icon: fas fa-info-circle
-order: 4
+order: 6
 ---
 
 ## 안녕하세요, 황원태입니다

@@ -1,0 +1,19 @@
+# 블로그 글은 기술과 성찰 두 섹션으로 나뉜다.
+# 글의 카테고리는 [큰 갈래, 작은 갈래] 두 개만 쓰고, 아래 목록에 있는 것만 쓴다.
+# 섹션은 큰 갈래로 정해진다(_plugins/post-section-check.rb). 순서대로 홈에 나란히 놓인다.
+tech:
+  title: 기술
+  url: /tech/
+  intro: 무엇이 어떻게 돌아가는지, 어떻게 만들었는지 적은 글
+  categories:
+    ai: [knowledge-graph, tools]
+    frontend: [vue, css, design-system, architecture, ux, webview, tooling]
+    engineering: [collaboration, technical-debt, blog]
+    blockchain: [web3, conference]
+reflection:
+  title: 성찰
+  url: /reflection/
+  intro: 일하며 무엇을 느꼈고 생각이 어떻게 바뀌었는지 돌아본 글
+  categories:
+    growth: [ai-era, career, work, book]
+    retrospective: [project, yearly]

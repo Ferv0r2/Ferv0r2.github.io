@@ -3,7 +3,7 @@ title: "브레이크포인트: 유난한 도전과 나의 성장곡선"
 description: 토스팀 이야기를 통해 개발자로서 나를 되돌아보다
 author: Ferv0r2
 date: 2025-03-24 23:00:00 +0900
-categories: [book, reflection]
+categories: [growth, book]
 tags: [growth, book, challenge]
 render_with_liquid: false
 image: /assets/img/post/20250324/banner.jpg

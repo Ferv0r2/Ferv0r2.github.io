@@ -4,7 +4,7 @@ description: "AI가 산출물의 생성 비용을 낮춘 시대에, 무엇을 �
 author: Ferv0r2
 date: 2026-06-10 23:13:00 +0900
 last_modified_at: 2026-06-10 23:13:00 +0900
-categories: [growth, reflection]
+categories: [growth, ai-era]
 tags: [ai, product, productivity, startup, mvp, reflection]
 render_with_liquid: false
 image:

@@ -3,7 +3,7 @@ title: "D'CENT 앱 리뉴얼: 테마 적용과 크로스 플랫폼 이슈 해결
 description: "D'CENT 앱 리뉴얼 프로젝트에서 다크 테마 도입 과정과 발생한 크로스 플랫폼 이슈를 해결한 경험을 공유합니다. iOS 호환성 문제를 극복한 과정을 상세히 다룹니다."
 author: Ferv0r2
 date: 2025-02-23 16:00:00 +0900
-categories: [webview, theme, frontend, cross-platform]
+categories: [frontend, webview]
 tags: [D'CENT, theme, iOS, Safari, compatibility, refactoring, Scss]
 render_with_liquid: false
 image: https://store.dcentwallet.com/cdn/shop/articles/app-67930e689e231_73f62d71-8db5-4ee8-b181-4dbba2431ec0_1100x.webp?v=1738747206

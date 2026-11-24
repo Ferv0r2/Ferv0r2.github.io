@@ -3,7 +3,7 @@ title: Swap-X 프로젝트 회고 - 병합과 리뉴얼
 description: 사내 프로젝트 Swap-X 릴리즈를 마친 후 과정에 대한 회고
 author: Ferv0r2
 date: 2024-10-27 15:30:00 +0900
-categories: [frontend, blockchain, retrospective]
+categories: [retrospective, project]
 tags: [swap, exchange, cross, wallet, ux, monitoring, cvr]
 render_with_liquid: false
 image: /assets/img/post/20241027/banner.png

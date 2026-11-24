@@ -1,0 +1,26 @@
+---
+layout: default
+---
+
+{% assign section = site.data.sections[page.section] %}
+{% assign stories = site.posts | where: 'section', page.section | where_exp: 'post', 'post.hidden != true' %}
+
+<div class="journal-index">
+  <header class="section-head">
+    <h1>{{ section.title }}</h1>
+    <p>{{ section.intro }}</p>
+  </header>
+  <section class="story-list" aria-labelledby="list-title">
+    <div class="list-head">
+      <h2 id="list-title">글 {{ stories.size }}편</h2>
+      {% for entry in site.data.sections %}
+        {% unless entry[0] == page.section %}
+          <a href="{{ entry[1].url | relative_url }}">{{ entry[1].title }} 글 보기 <span aria-hidden="true">›</span></a>
+        {% endunless %}
+      {% endfor %}
+    </div>
+    <ol>
+      {% for story in stories %}{% include story-item.html story=story %}{% endfor %}
+    </ol>
+  </section>
+</div>

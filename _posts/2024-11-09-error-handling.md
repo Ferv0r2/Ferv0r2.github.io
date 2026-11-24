@@ -3,7 +3,7 @@ title: 프론트엔드 에러 처리 전략과 사용자 경험 개선
 description: 네트워크부터 입력까지, 효과적인 에러 관리로 사용자 경험을 높이는 방법
 author: Ferv0r2
 date: 2024-11-09 12:00:00 +0900
-categories: [frontend, user experience, error handling]
+categories: [frontend, ux]
 tags: [error handling, user experience, frontend development, best practices]
 render_with_liquid: false
 image: /assets/img/post/20241109/banner.png

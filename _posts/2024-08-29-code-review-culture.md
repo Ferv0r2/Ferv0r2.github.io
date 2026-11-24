@@ -3,7 +3,7 @@ title: 코드 리뷰 문화와 팀 생산성
 description: 효과적인 협업에 필수적인 코드 리뷰 문화에 대하여
 author: Ferv0r2
 date: 2024-08-29 23:41:00 +0900
-categories: [team productivity, code quality, collaboration]
+categories: [engineering, collaboration]
 tags: [code review, best practices, development process, team culture, software engineering]
 render_with_liquid: false
 image: /assets/img/post/20240829/banner.png

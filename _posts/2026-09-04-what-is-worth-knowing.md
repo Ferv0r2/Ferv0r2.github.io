@@ -4,7 +4,7 @@ description: "AI와 작업하며 예상 질문에 답하려다 보면, 풀어야
 author: Ferv0r2
 date: 2026-09-04 16:00:00 +0900
 last_modified_at: 2026-09-04 16:00:00 +0900
-categories: [growth, reflection]
+categories: [growth, ai-era]
 tags: [ai, engineering, decision-making, problem-framing, code-review, testing]
 render_with_liquid: false
 image: /assets/img/post/20260904/banner.png

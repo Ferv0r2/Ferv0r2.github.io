@@ -1,0 +1,31 @@
+{% assign story = include.story %}
+<li>
+  <a href="{{ story.url | relative_url }}">
+    <div class="story-text">
+      <div class="story-details">
+        <time datetime="{{ story.date | date_to_xmlschema }}">{{ story.date | date: '%Y.%m.%d' }}</time>
+        <span class="story-section">{{ story.categories | last | escape }}</span>
+      </div>
+      <span class="story-title">{{ story.title | escape }}</span>
+      {% if story.description %}<p>{{ story.description | strip_html | escape }}</p>{% endif %}
+    </div>
+    {% if story.image %}
+      {% comment %}
+        테마의 refactor-content는 "<img "로 시작하는 태그를 찾아, 홈이 아닌 쪽에서는 팝업 링크로 감싼다.
+        목록 줄 전체가 이미 링크라 링크 안에 링크가 생기므로, "<img" 뒤를 줄바꿈으로 써서 건너뛰게 한다.
+      {% endcomment %}
+      {% assign cover = story.image.path | default: story.image %}
+      {% capture thumb_path %}/assets/img/thumbs/{{ story.slug }}.webp{% endcapture %}
+      {% assign thumb = site.static_files | where: 'path', thumb_path | first %}
+      <div class="story-thumb">
+        {% if thumb %}
+          <img
+            src="{{ thumb.path | relative_url }}" width="128" height="80" alt="" loading="lazy">
+        {% else %}
+          <img
+            src="{% include img-url.html src=cover img_path=story.img_path %}" width="128" height="80" alt="" loading="lazy">
+        {% endif %}
+      </div>
+    {% endif %}
+  </a>
+</li>

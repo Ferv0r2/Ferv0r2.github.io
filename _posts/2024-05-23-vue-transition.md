@@ -3,7 +3,7 @@ title: Vue - Transition을 활용한 센스있는 Animation 처리 방법
 description: Transition의 hooks와 활용도를 예제와 함께 살펴보자.
 author: Ferv0r2
 date: 2024-05-23 02:57:00 +0900
-categories: [vue, animation]
+categories: [frontend, vue]
 tags: [transition, component, typing animation]
 render_with_liquid: false
 image: /assets/img/post/20240523/banner.png

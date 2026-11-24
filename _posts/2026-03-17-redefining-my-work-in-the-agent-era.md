@@ -4,7 +4,7 @@ description: "AI 에이전트 시대에 개발자의 역할이 코드 작성자�
 author: Ferv0r2
 date: 2026-03-17 20:15:00 +0900
 last_modified_at: 2026-03-17 20:15:00 +0900
-categories: [growth, reflection]
+categories: [growth, ai-era]
 tags: [ai, agent, engineering, developer, productivity, memory, automation]
 render_with_liquid: false
 image: /assets/img/post/20260317/banner.png

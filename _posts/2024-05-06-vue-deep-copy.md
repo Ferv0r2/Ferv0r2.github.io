@@ -2,7 +2,7 @@
 title: Vue - 다차원 배열 Proxy(Object)의 깊은 복사는 어떻게 할까?
 author: Ferv0r2
 date: 2024-05-06 22:25:00 +0900
-categories: [vue]
+categories: [frontend, vue]
 tags: [proxy, spreadOperator, deepCopy, structuredClone]
 render_with_liquid: false
 image: /assets/img/post/20240506/banner.png

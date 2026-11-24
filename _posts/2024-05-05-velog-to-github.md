@@ -3,7 +3,7 @@ title: Velog to Github
 author: Ferv0r2
 date: 2024-05-05 14:08:00 +0900
 last_modified_at: 2024-05-05 14:08:00 +0900
-categories: [talk]
+categories: [engineering, blog]
 tags: [etc]
 render_with_liquid: false
 image: /assets/img/post/20240505/banner.png

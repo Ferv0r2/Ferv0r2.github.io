@@ -3,7 +3,7 @@ title: "BUIDL ASIA 2025 후기: AI와 영지식 증명"
 description: "BUIDL ASIA 2025 행사에서 논의된 AI와 영지식 증명 기반 블록체인 기술의 미래 방향성에 대한 주요 발표와 핵심 내용을 정리합니다."
 author: Ferv0r2
 date: 2025-04-26 18:00:00 +0900
-categories: [blockchain, ai, zkp, web3]
+categories: [blockchain, conference]
 tags: [BUIDL Asia, zero knowledge, ai, Web3]
 render_with_liquid: false
 image: /assets/img/post/20250426/banner.png
