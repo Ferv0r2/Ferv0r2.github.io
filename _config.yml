@@ -19,8 +19,8 @@ title: Ferv0r2 # the main title
 tagline: Product Engineer # it will display as the sub-title
 
 description: >- # used by seo meta and the atom feed
-  Ferv0r2의 기술 블로그. 프론트엔드 개발, AI 에이전트 활용, 생산성, 1인 게임 개발, 성장 회고를 다룹니다.
-  Frontend engineering, AI agent workflows, productivity, and personal growth — written in Korean.
+  Product Engineer Ferv0r2의 블로그. 무엇이 어떻게 돌아가는지 적은 기술 글과, 일하며 생각이 어떻게 바뀌었는지 돌아본 성찰 글을 나눠 싣습니다.
+  Product engineering, AI and knowledge graphs, frontend, and reflections on work — written in Korean.
 
 # Fill in the protocol & hostname for your site.
 # e.g. 'https://username.github.io', note that it does not end with a '/'.
@@ -85,7 +85,7 @@ avatar: "/assets/img/commons/avatar.png"
 
 # The URL of the site-wide social preview image used in SEO `og:image` meta tag.
 # It can be overridden by a customized `page.image` in front matter.
-social_preview_image: "/assets/img/commons/avatar.png"
+social_preview_image: "/assets/img/commons/og-card.png" # 원본: tools/og-card.html
 
 # boolean type, the global switch for TOC in posts.
 toc: true

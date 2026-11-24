@@ -1,6 +1,7 @@
 ---
 # the default layout is 'page'
 title: 소개
+description: "Product Engineer 황원태입니다. 빠르게 만들어 보고, 그 과정에서 배운 것을 글로 남깁니다."
 permalink: /about/
 icon: fas fa-info-circle
 order: 6

@@ -1,0 +1,60 @@
+<!doctype html>
+<!--
+  링크 미리보기(og:image)에 쓰는 1200×630 카드의 원본.
+  다시 만들 때(저장소 루트에서):
+  "/Applications/Google Chrome.app/Contents/MacOS/Google Chrome" --headless=new --hide-scrollbars \
+    --window-size=1200,630 --screenshot=assets/img/commons/og-card.png "file://$PWD/tools/og-card.html"
+-->
+<html lang="ko">
+<meta charset="utf-8">
+<style>
+  html, body { margin: 0; width: 1200px; height: 630px; overflow: hidden; }
+  body {
+    box-sizing: border-box;
+    background: #f8f6ee;
+    border-top: 12px solid #243fab;
+    color: #18203c;
+    font-family: 'Apple SD Gothic Neo', 'Noto Sans KR', sans-serif;
+    display: grid;
+    grid-template-columns: 220px 1fr;
+    gap: 64px;
+    align-items: center;
+    padding: 0 96px;
+  }
+  img { width: 220px; height: 220px; border-radius: 50%; object-fit: cover; }
+  .name {
+    font: 700 132px/.92 Baskerville, Georgia, serif;
+    letter-spacing: -.038em;
+    color: #243fab;
+  }
+  .role {
+    margin-top: 22px;
+    font: 500 36px/1.3 'SFMono-Regular', Menlo, monospace;
+    color: #54586a;
+  }
+  .line {
+    margin-top: 44px;
+    padding-left: 20px;
+    border-left: 8px solid #edbd46;
+    font-size: 34px;
+    font-weight: 700;
+    letter-spacing: -.03em;
+  }
+  .url {
+    position: absolute;
+    right: 96px;
+    bottom: 44px;
+    font: 500 24px 'SFMono-Regular', Menlo, monospace;
+    color: #54586a;
+  }
+</style>
+<body>
+  <img src="../assets/img/commons/avatar.png" alt="">
+  <div>
+    <div class="name">Ferv0r2</div>
+    <div class="role">Product Engineer</div>
+    <div class="line">기술과 성찰을 나눠 적는 블로그</div>
+  </div>
+  <div class="url">ferv0r2.github.io</div>
+</body>
+</html>

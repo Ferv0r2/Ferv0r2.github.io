@@ -4,9 +4,9 @@ permalink: /llms.txt
 ---
 # {{ site.title }}
 
-> {{ site.social.name }}의 기술 블로그 (Frontend Engineer)
-> 주제: AI 에이전트 활용, 프론트엔드 개발, 생산성, 1인 게임 개발, 성장 회고
-> Topics: AI agent workflows, frontend engineering, productivity, game development, personal growth
+> {{ site.social.name }}의 블로그 ({{ site.tagline }})
+> 섹션: 기술(AI와 지식그래프, 프론트엔드, 엔지니어링, 블록체인), 성찰(성장, 회고)
+> Sections: tech (AI and knowledge graphs, frontend, engineering, blockchain), reflection (growth, retrospectives)
 > Language: Korean (한국어)
 > URL: {{ site.url }}
 
